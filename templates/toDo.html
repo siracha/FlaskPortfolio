@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/css/styles.css">
+  <title>To do list</title>
+</head>
+<body style="text-align: center;">
+  <h1>Simple to do list</h1>
+  <i class="bi bi-list-task"></i>
+  <section id="add_task">
+    <input id="input_task" type="text"  placeholder="Enter task">
+    <button onclick="addTask()">save</button>
+  </section>
+  <section>
+    <table style="margin-left: auto; margin-right: auto;">
+      <tbody id="task_list">
+      </tbody>
+    </table>
+  </section>
+  <script src="static\js\scripts.js"></script>
+</body>
+</html>

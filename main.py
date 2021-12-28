@@ -9,4 +9,7 @@ def index():
 @app.route('/clock')
 def clock():
   return render_template('clock.html')
-  
+
+@app.route('/toDo')
+def toDo():
+  return render_template('toDo.html')

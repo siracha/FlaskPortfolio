@@ -68,3 +68,34 @@ function startTime() {
     if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
     return i;
   }
+
+  function addTask() {
+      //get input task name
+      const taskName = document.getElementById('input_task').value;
+      const p = document.createElement("span");
+      p.append(taskName);
+      //create check box and delete button
+      const chkbox = document.createElement('input');
+      chkbox.setAttribute("type", "checkbox");
+
+      const deleteBtn = document.createElement("button");
+      deleteBtn.setAttribute("style", "background-color:red")
+      const btnTxt = document.createTextNode("x");
+      deleteBtn.appendChild(btnTxt);
+      deleteBtn.setAttribute("onclick", "delRow(this)");
+
+
+      //append created items to table
+      const newTask = document.getElementById('task_list');
+      const row = document.createElement('tr');
+      row.append(chkbox, p, deleteBtn);
+      newTask.append(row);
+  }
+  
+  function delRow(delBtn){
+      let theTable = delBtn.parentNode.parentNode.parentNode;
+      let theRow = delBtn.parentNode.rowIndex;
+
+      theTable.deleteRow(theRow);
+
+  }
